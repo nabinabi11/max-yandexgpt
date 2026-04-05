@@ -36,6 +36,7 @@ class MaxYandexGPT:
         yandex_folder_id: str | None = None,
         *,
         config: Config | None = None,
+        model: str | None = None,
         system_prompt: str | None = None,
         stream: bool | None = None,
         temperature: float | None = None,
@@ -50,6 +51,8 @@ class MaxYandexGPT:
                 yandex_folder_id=yandex_folder_id or os.getenv("YANDEX_FOLDER_ID", ""),
             )
 
+        if model is not None:
+            self.config.model = model
         if system_prompt is not None:
             self.config.system_prompt = system_prompt
         if stream is not None:

@@ -8,6 +8,7 @@ bot = MaxYandexGPT(
     max_token=os.getenv("MAX_TOKEN"),
     yandex_api_key=os.getenv("YANDEX_API_KEY"),
     yandex_folder_id=os.getenv("YANDEX_FOLDER_ID"),
+    model="yandexgpt-5.1/latest",
     system_prompt="Ты — дружелюбный помощник. Отвечай кратко и по делу.",
     stream=False,       # Без стриминга — один ответ целиком
     temperature=0.5,
